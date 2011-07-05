@@ -141,9 +141,9 @@
     </tstamp>
     <property name="copyright" value="Copyright &amp;copy;  The Apache Software Foundation. All Rights Reserved.">
     </property>
-    <property name="title" value="Commons CSV 0.1-SNAPSHOT API">
+    <property name="title" value="Apache Noggit 0.1-SNAPSHOT API">
     </property>
-    <javadoc use="true" private="true" destdir="${javadocdir}" author="true" version="true" sourcepath="src/java" packagenames="org.apache.commons.csv.*">
+    <javadoc use="true" private="true" destdir="${javadocdir}" author="true" version="true" sourcepath="src/main" packagenames="org.apache.noggit.*">
       <classpath>
         <path refid="build.classpath">
         </path>
