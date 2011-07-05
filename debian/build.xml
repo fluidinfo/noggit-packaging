@@ -46,7 +46,7 @@
     <javac destdir="${classesdir}" deprecation="true" debug="true"
     optimize="true" excludes="**/package.html" source="1.4" target="1.4">
       <src>
-        <pathelement location="src/java">
+        <pathelement location="src/main">
         </pathelement>
       </src>
       <classpath refid="build.classpath">
