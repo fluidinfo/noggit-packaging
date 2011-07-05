@@ -22,13 +22,13 @@ UPSTREAM_VERSION := $(shell echo $(DEB_VERSION) | grep -o "^.*svn[0-9]\+")
 UPSTREAM_RELEASE := $(shell echo $(UPSTREAM_VERSION) | grep -o "^[^+]\+")
 UPSTREAM_BASENAME = $(DEB_SOURCE_PACKAGE)-$(UPSTREAM_RELEASE)
 
-install/libcommons-csv-java::
-	install -m 0644 -D target/$(UPSTREAM_BASENAME).jar $(CURDIR)/debian/libcommons-csv-java/usr/share/java/commons-csv-$(UPSTREAM_VERSION).jar
-	dh_link /usr/share/java/commons-csv-$(UPSTREAM_VERSION).jar /usr/share/java/commons-csv.jar
+install/libnoggit-java::
+	install -m 0644 -D target/$(UPSTREAM_BASENAME).jar $(CURDIR)/debian/libnoggit-java/usr/share/java/noggit-$(UPSTREAM_VERSION).jar
+	dh_link /usr/share/java/noggit-$(UPSTREAM_VERSION).jar /usr/share/java/noggit.jar
 
-install/libcommons-csv-java-doc::
-	install -d $(CURDIR)/debian/libcommons-csv-java-doc/usr/share/doc/libcommons-csv-java-doc
-	cp -r dist/docs/api $(CURDIR)/debian/libcommons-csv-java-doc/usr/share/doc/libcommons-csv-java-doc/
+install/libnoggit-java-doc::
+	install -d $(CURDIR)/debian/libnoggit-java-doc/usr/share/doc/libnoggit-java-doc
+	cp -r dist/docs/api $(CURDIR)/debian/libnoggit-java-doc/usr/share/doc/libnoggit-java-doc/
 
 remove-source:
 	rm -f checkstyle.xml LICENSE.txt maven.xml NOTICE.txt pom.xml
@@ -38,10 +38,10 @@ remove-source:
 
 restore-from-source: remove-source
 	echo $(DEB_VERSION)
-	tar xzf ../commons-csv_$(UPSTREAM_VERSION).orig.tar.gz
+	tar xzf ../noggit_$(UPSTREAM_VERSION).orig.tar.gz
 
 get-orig-source:
 	debian/get-orig-source
 
 upload:
-	cd .. ; dupload -t vanbest commons-csv_$(DEB_VERSION)_$(DEB_HOST_ARCH).changes
+	cd .. ; dupload -t vanbest noggit_$(DEB_VERSION)_$(DEB_HOST_ARCH).changes
