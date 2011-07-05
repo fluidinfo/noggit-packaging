@@ -46,7 +46,7 @@
     <javac destdir="${classesdir}" deprecation="true" debug="true"
     optimize="true" excludes="**/package.html" source="5" target="5">
       <src>
-        <pathelement location="src/main">
+        <pathelement location="src/main/java">
         </pathelement>
       </src>
       <classpath refid="build.classpath">
@@ -143,7 +143,7 @@
     </property>
     <property name="title" value="Apache Noggit 0.1-SNAPSHOT API">
     </property>
-    <javadoc use="true" private="true" destdir="${javadocdir}" author="true" version="true" sourcepath="src/main" packagenames="org.apache.noggit.*">
+    <javadoc use="true" private="true" destdir="${javadocdir}" author="true" version="true" sourcepath="src/main/java" packagenames="org.apache.noggit.*">
       <classpath>
         <path refid="build.classpath">
         </path>
